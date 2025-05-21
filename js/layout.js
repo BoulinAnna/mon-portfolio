@@ -7,7 +7,7 @@ const navbarHTML = `
     <div class="nav-left">
       <a href="${prefix}index.html">ANNA BOULIN</a>
       <span class="separator">|</span>
-      <a href="${prefix}index.html">PORTFOLIO</a>
+      <a href="${prefix}projets/liste_projet.html">PORTFOLIO</a>
     </div>
     <div class="nav-right">
       <a href="${prefix}index.html#a-propos">À PROPOS</a>
