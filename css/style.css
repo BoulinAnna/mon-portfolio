@@ -1,14 +1,39 @@
 /* === RESET & BASE === */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+.content {
+  padding: 30px;
+}
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #f7f7f7;
   color: #222;
-  padding: 30px;
 }
 header {
   text-align: center;
