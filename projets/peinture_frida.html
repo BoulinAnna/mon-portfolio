@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+  <html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Black Edition — Symbios</title>
+      <link rel="stylesheet" href="../css/style.css"> <!-- Garde le style général -->
+      <link rel="stylesheet" href="../css-projets/video_frida.css"> <!-- Style spécifique -->
+
+    </head>
+    <body>
+      <script>
+        function playVideo() {
+          const thumbnail = document.querySelector(".video-thumbnail");
+          const video = document.getElementById("peintureVideo");
+
+          thumbnail.style.display = "none";
+          video.style.display = "block";
+          video.play();
+        }
+      </script>
+
+      <main class="projet-page">
+        <a href="../index.html" class="retour">← Retour au portfolio</a>
+
+        <h1>Peinture à l'huile</h1>
+        <p class="description">
+          Conception d’une canne à pêche surfcasting haut de gamme pensée pour les pratiquants les plus techniques. Ce produit s’intègre dans la gamme Symbios Heavy de Caperlan (Decathlon), avec une attention particulière portée sur la distance de lancer, la sensibilité, la visibilité en conditions difficiles et le ressenti sensoriel.
+          L’approche design repose sur un positionnement premium, une direction artistique épurée et sombre, pour souligner la performance et l’élégance de la "Black Edition".
+        </p>
+        <section class="video-section">
+          <h2>Processus créatif en peinture</h2>
+
+          <div class="video-wrapper">
+            <div class="video-thumbnail" onclick="playVideo()">
+              <img src="../images/video_frida/frida.jpg" alt="Vidéo peinture">
+              <div class="play-button">&#9658;</div> <!-- bouton play -->
+            </div>
+
+            <video id="peintureVideo" controls width="100%" preload="auto" style="display: none;">
+              <source src="../images/video_frida/frida.mp4" type="video/mp4">
+              Votre navigateur ne supporte pas la lecture vidéo.
+            </video>
+
+          </div>
+        </section>
+
+          <a href="../index.html" class="retour">← Retour au portfolio</a>
+      </main>
+  </body>
+</html>

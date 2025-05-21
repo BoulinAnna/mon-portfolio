@@ -1,0 +1,66 @@
+body {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.projet-page {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+h1, .description {
+  width: 100%;
+  margin-bottom: 30px; /* ← c’est ça qui ajoute l’espace */
+  padding: 0;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+
+.retour {
+  display: inline-flex;
+  margin-top: 40px; /* 👈 ajoute de l'air au-dessus */
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: rgb(53, 68, 72);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 16px;
+  border: 2px solid rgb(64, 77, 93);
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.retour:hover {
+  background-color: rgb(73, 84, 95);
+  color: #ffffff; /* couleur du fond */
+}
+
+
+.planches {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.planches img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.334);
+}

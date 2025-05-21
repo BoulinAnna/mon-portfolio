@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accueil | Anna Boulin</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css-projets/homepage.css" />
+
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  </header>
+
+      <body>
+        <div id="navbar"></div>
+        <main>
+            <section class="hero">
+              <img src="images/homepage/image_portfolio.png" alt="Anna Boulin en train de dessiner" class="portrait" />
+            </section>
+
+            <section id="a-propos" class="presentation">
+              <div class="presentation-container">
+                <h2>À propos</h2>
+                <div class="presentation-text">
+                <p>
+                  Après 7 ans chez Decathlon comme designer graphique, j’ai choisi de me reconvertir dans le développement web pour allier créativité et technique. <br />
+                  Formée en full-stack chez Le Wagon, je conçois aujourd’hui des applications web à la fois fonctionnelles et soignées.
+                </p>
+                <p>
+                  Ce portfolio présente une sélection de mes projets chez Decathlon ainsi que BenevoFlex, ma plateforme de fin de formation.
+                </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="skills">
+              <div class="skills-container">
+                <h2 class="section-title">Ce que je fais</h2>
+                <div class="skill-grid">
+                  <div class="skill">
+                    <h3>Développement web</h3>
+                    <p>J’aime donner vie à des idées à travers des interfaces claires et fonctionnelles. Formée au développement full-stack chez Le Wagon, je conçois des applications web avec Ruby on Rails, côté front comme côté back.</p>
+                  </div>
+
+                  <div class="skill">
+                    <h3>Design Graphique</h3>
+                    <p>Avec 7 ans d’expérience en design produit, packaging et identité visuelle, je conçois des logos et des univers graphiques en phase avec l’ADN des marques.</p>
+                  </div>
+
+                  <div class="skill">
+                    <h3>UI/UX Design</h3>
+                    <p>Je conçois des interfaces avec Figma et Illustrator, en plaçant toujours l’utilisateur au centre.</p>
+                  </div>
+
+                  <div class="skill">
+                    <h3>Gestion de Projet</h3>
+                    <p>J’aime structurer les étapes et faire avancer les choses, tout en gardant l’expérience utilisateur au cœur du projet.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+        </main>
+        <div id="footer"></div>
+        <script>
+          fetch("components/navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
+
+          fetch("components/footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+        </script>
+
+      </body>
+  </html>
