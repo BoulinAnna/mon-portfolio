@@ -24,11 +24,13 @@ html {
 .hero {
   position: relative;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-left: 0;
-  height: 100vh;
+  padding: 120px 20px 20px;
+  height: auto;
   overflow: hidden;
+  flex-direction: column;
+  text-align: center;
 }
 
 .hero .background {
@@ -45,79 +47,81 @@ html {
 }
 
 .hero .portrait {
-  margin: 0;
-  align-self: flex-end;
-  height: 80vh;
+  margin-top: 30px;
+  align-self: center;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
   z-index: 2;
   opacity: 0.75;
+  display: block;
+  object-fit: contain;
 }
 
 .hero .portfolio-bloc {
-  position: absolute;
-  top: 55%;
-  right: 60px;
-  transform: translateY(-50%);
+  position: relative;
+  margin-top: 20px;
   max-width: 300px;
   z-index: 3;
   opacity: 0.9;
+  display: block;
 }
 
 /* SECTION PRÉSENTATION */
 .presentation {
   max-width: 900px;
   margin: 0 auto;
-  padding: 100px 40px;
+  padding: 60px 20px;
   color: #e3e1e1;
 }
 
 .presentation-container {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 60px;
-  margin: 120px auto 0;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 60px auto 0;
 }
 
 .presentation h2 {
   margin: 0 0 20px 0;
   font-size: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
 .presentation-text {
-  padding-left: 4px;
+  padding: 0;
+  text-align: left;
 }
 
 .presentation-text p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  max-width: 600px;
+  max-width: 100%;
 }
 
 /* SECTION COMPÉTENCES */
 .skills {
   max-width: 900px;
   margin: 0 auto 80px;
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 .skills h2 {
-  text-align: left;
-  margin-left: 0;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .skills-container {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 60px;
-  max-width: 900px;
-  margin: 63px auto;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin: 40px auto;
 }
 
 .skill-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 30px;
 }
 
@@ -128,8 +132,9 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 220px;
+  min-height: auto;
   transition: transform 0.2s ease;
+  text-align: left;
 }
 
 .skill:hover {
@@ -158,4 +163,40 @@ body::before {
   filter: blur(17px);
   z-index: -1;
   pointer-events: none;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  .presentation-container {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .skills-container {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding-top: 120px;
+  }
+
+  .hero .portrait {
+    width: auto;
+    height: 80vh;
+    margin-top: 0;
+    object-fit: contain;
+  }
+
+  .hero .portfolio-bloc {
+    position: absolute;
+    top: 55%;
+    right: 60px;
+    transform: translateY(-50%);
+  }
 }

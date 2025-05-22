@@ -144,3 +144,36 @@ header p {
     text-align: center;
   }
 }
+
+* MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  .presentation-container {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .skills-container {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .hero .portrait {
+    width: auto;
+    height: 80vh;
+  }
+
+  .hero .portfolio-bloc {
+    position: absolute;
+    top: 55%;
+    right: 60px;
+    transform: translateY(-50%);
+  }
+}
