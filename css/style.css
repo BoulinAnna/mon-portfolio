@@ -26,26 +26,27 @@ main {
   padding: 30px;
 }
 
-
 body {
   font-family: 'Helvetica Neue', sans-serif;
   background-color: #f7f7f7;
   color: #222;
 }
+
 header {
   text-align: center;
   margin-bottom: 40px;
 }
+
 header h1 {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
+
 header p {
   font-size: 1rem;
   color: #555;
 }
-
 
 .project {
   text-decoration: none;
@@ -67,7 +68,7 @@ header p {
   max-width: 100%;
   margin: 0 auto;
   border-radius: 6px;
-  box-shadow: none; /* temporairement pour mieux voir */
+  box-shadow: none;
 }
 
 .project h3 {
@@ -77,6 +78,7 @@ header p {
   margin: 0;
   background-color: #fff;
 }
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -85,95 +87,150 @@ header p {
   margin-bottom: 30px;
 }
 
-/* === RESPONSIVE === */
+/* NAVBAR STYLES */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #121212;
+  color: #e3e1e1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #e3e1e1;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.nav .separator {
+  margin: 0 8px;
+  color: #777;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  background: transparent;
+  z-index: 1001;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #e3e1e1;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* FOOTER STYLES */
+footer {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 0.8rem;
+  background-color: #121212;
+  color: #e3e1e1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  text-align: center;
+}
+
+.footer-link {
+  color: #e3e1e1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-link:hover {
+  color: #00a0dc;
+}
+
+footer svg {
+  fill: #e3e1e1;
+  transition: fill 0.3s ease;
+}
+
+footer a.footer-link:hover svg {
+  fill: #00a0dc;
+}
+
 @media screen and (max-width: 768px) {
-  body {
-    padding: 16px;
-    font-size: 1rem;
-  }
-
   .nav {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    position: relative;
   }
 
-  .nav-left, .nav-right {
+  .nav-left {
+    flex-grow: 1;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-right {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 6px;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #121212;
+    padding: 10px 20px;
+    border-radius: 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    min-width: 150px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
-  .gallery {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .nav-right.mobile-visible {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
-  .project h3 {
-    font-size: 1.2rem;
-    padding: 12px 0;
+  .nav-right a {
+    padding: 10px 0;
+    white-space: nowrap;
+    text-align: right;
   }
 
-  .project img {
-    border-radius: 0;
-  }
-
-  .project {
-    border-radius: 0;
-  }
-
-  header {
-    padding: 20px 0;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  header p {
-    font-size: 0.95rem;
-  }
 
   footer {
     flex-direction: column;
-    gap: 8px;
-    height: auto;
-    padding: 10px 20px;
+    align-items: center;
     text-align: center;
-  }
-}
-
-* MEDIA QUERIES */
-@media screen and (min-width: 768px) {
-  .presentation-container {
-    grid-template-columns: 200px 1fr;
-  }
-
-  .skills-container {
-    grid-template-columns: 200px 1fr;
-  }
-
-  .skill-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero {
-    flex-direction: row;
-    justify-content: flex-start;
-    text-align: left;
-  }
-
-  .hero .portrait {
-    width: auto;
-    height: 80vh;
-  }
-
-  .hero .portfolio-bloc {
-    position: absolute;
-    top: 55%;
-    right: 60px;
-    transform: translateY(-50%);
   }
 }

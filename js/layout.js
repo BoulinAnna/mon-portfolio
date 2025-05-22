@@ -1,7 +1,5 @@
-// Détecte si on est dans un sous-dossier "projets"
 const prefix = location.pathname.includes("projets/") ? "../" : "./";
 
-// === NAVBAR ===
 const navbarHTML = `
   <nav class="nav">
     <div class="nav-left">
@@ -9,7 +7,12 @@ const navbarHTML = `
       <span class="separator">|</span>
       <a href="${prefix}projets/liste_projet.html">PORTFOLIO</a>
     </div>
-    <div class="nav-right">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-right" id="nav-right">
       <a href="${prefix}index.html#a-propos">À PROPOS</a>
       <a href="${prefix}projets/liste_projet.html">PROJETS</a>
       <a href="${prefix}index.html#contact">CONTACT</a>
@@ -17,7 +20,6 @@ const navbarHTML = `
   </nav>
 `;
 
-// === FOOTER ===
 const footerHTML = `
   <footer id="contact">
     <div class="footer-left">
@@ -54,9 +56,29 @@ const footerHTML = `
   </footer>
 `;
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const footer = document.getElementById("footer");
+
   if (navbar) navbar.innerHTML = navbarHTML;
   if (footer) footer.innerHTML = footerHTML;
+
+  const toggle = document.getElementById("menu-toggle");
+  const navRight = document.getElementById("nav-right");
+
+  if (toggle && navRight) {
+    toggle.addEventListener("click", () => {
+      navRight.classList.toggle("mobile-visible");
+
+    });
+  }
+
+  // 💡 Nouveau code ici
+  const navLinks = document.querySelectorAll('#nav-right a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navRight.classList.remove('mobile-visible');
+    });
+  });
 });
