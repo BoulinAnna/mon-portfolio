@@ -2,7 +2,7 @@
 body, p {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #e3e1e1;
 }
 
@@ -10,7 +10,7 @@ h1, h2, h3, .section-title {
   font-family: 'Bebas Neue', sans-serif;
   font-weight: normal;
   letter-spacing: 1.5px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-transform: uppercase;
   color: #e3e1e1;
 }
@@ -74,7 +74,7 @@ html {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 60px;
-  margin: 120px auto 0; /* ↑ plus d’espace avec l’image du dessus */
+  margin: 120px auto 0;
 }
 
 .presentation h2 {
@@ -88,7 +88,7 @@ html {
 }
 
 .presentation-text p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 20px;
   max-width: 600px;
@@ -135,105 +135,6 @@ html {
 .skill:hover {
   transform: translateY(-4px);
 }
-
-/* NAVIGATION */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 60px;
-  padding: 0 20px;
-  background-color: rgba(22, 21, 24, 0.65); /* noir semi-transparent */
-  color: #e3e1e1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 10;
-}
-
-
-.nav-right {
-  display: flex;
-  align-items: center;
-  gap: 20px; /* 👈 ajoute cet espacement entre les liens */
-}
-
-.nav-right a {
-  margin-left: 20px;
-}
-
-
-.nav a, .nav-left a{
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #e3e1e1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav a:hover {
-  color: #aaa;
-}
-
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.nav-left span.separator {
-  color: #555;
-  font-weight: lighter;
-}
-
-
-
-/* FOOTER */
-footer {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.5rem;
-  letter-spacing: 1px;
-  font-weight: 400;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 60px;
-  background-color: #161518;
-  color: #e3e1e1;
-  font-size: 0.9rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-footer a.footer-link {
-  display: flex;
-  align-items: center;
-  color: #e3e1e1;
-  text-decoration: none;
-  font-size: 0.5rem;
-  gap: 6px;
-}
-
-footer a.footer-link:hover {
-  color: #00a0dc;
-}
-
-footer a.footer-link svg {
-  fill: #e3e1e1;
-  transition: fill 0.3s ease;
-}
-
-footer a.footer-link:hover svg {
-  fill: #00a0dc;
-}
-
-
 
 /* BACKGROUND GLOBAL */
 body {
