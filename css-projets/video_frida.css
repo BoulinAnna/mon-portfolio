@@ -1,60 +1,52 @@
+/* BACKGROUND GLOBAL */
 body {
-  background-color: #ce4907;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
 }
 
-h1, .description {
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  filter: blur(17px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1 {
   width: 100%;
-  margin-bottom: 30px; /* ← c’est ça qui ajoute l’espace */
+  margin-top: 200px; /* ← espace au-dessus du titre */
+  margin-bottom: 10px; /* ← petit espace avec la description */
   padding: 0;
   text-align: center;
-  color: white;
+  color: #ccc;
 }
 
 .description {
+  margin: 73px auto 104px; /* auto = centré horizontalement */
+  width: 100%;
+  max-width: 800px; /* ajuste selon ton goût */
   font-size: 1.1rem;
-  color: #ffffff;
+  color: #ccc;
   line-height: 1.6;
-  max-width: 100%;
-  margin-bottom: 50px;
+  text-align: center;
+  padding: 0;
 }
 
-.retour {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 10px 16px;
-  border: 2px solid white;
-  border-radius: 30px;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-}
 
-.retour:hover {
-  background-color: white;
-  color: #c45123; /* couleur du fond */
-}
 
 .video-section {
   max-width: 900px;
   margin: 40px auto;
-  text-align: center;
-}
-
-.video-section h2 {
-  margin-bottom: 20px;
-  font-size: 1.6rem;
-  color: #fff;
-}
-
-.video-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .video-thumbnail {
@@ -64,7 +56,7 @@ h1, .description {
 
 .video-thumbnail img {
   width: 100%;
-  max-width: 400px; /* Limite la largeur max de l'image */
+  max-width: 500px; /* Limite la largeur max de l'image */
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);

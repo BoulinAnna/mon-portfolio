@@ -1,11 +1,29 @@
+/* BACKGROUND GLOBAL */
 body {
-  background-color: #090912;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  filter: blur(17px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .projet-page {
-  max-width: 1000px;
+  max-width: 1250px;
   width: 100%;
   margin: 0 auto;
   padding: 60px 20px;
@@ -13,48 +31,32 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
 }
 
-h1, .description {
+h1 {
   width: 100%;
-  margin-bottom: 30px; /* ← c’est ça qui ajoute l’espace */
+  margin-top: 80px; /* ← espace au-dessus du titre */
+  margin-bottom: 10px; /* ← petit espace avec la description */
   padding: 0;
   text-align: center;
 }
 
 .description {
+  margin-top: 80px;
+  width: 100%;
   font-size: 1.1rem;
   color: #ccc;
   line-height: 1.6;
-  max-width: 100%;
-  margin-bottom: 50px;
+  text-align: center;
+  margin-bottom: 104px;
+  padding: 0;
 }
 
-.retour {
-  display: inline-flex;
-  margin-top: 40px; /* 👈 ajoute de l'air au-dessus */
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  color: white;
-  font-weight: 500;
-  text-decoration: none;
-  padding: 10px 16px;
-  border: 2px solid white;
-  border-radius: 30px;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-}
-
-.retour:hover {
-  background-color: white;
-  color: #0f0e0e; /* couleur du fond */
-}
 
 
 .planches {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 102px;
 }
 
 .planches img {

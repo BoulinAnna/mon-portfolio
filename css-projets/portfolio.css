@@ -1,13 +1,31 @@
+/* BACKGROUND GLOBAL */
 body {
-  background-color: #ffffff;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.25;
+  filter: blur(17px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .projet-page {
-  max-width: 1100px;
+  max-width: 1400px;
   width: 100%;
-  margin: 0 auto;
+  margin: 116px auto;
   padding: 60px 20px;
   color: #fff;
   font-family: 'Helvetica Neue', sans-serif;
@@ -28,33 +46,12 @@ h1, .description {
   margin-bottom: 50px;
 }
 
-.retour {
-  display: inline-flex;
-  margin-top: 40px; /* 👈 ajoute de l'air au-dessus */
-  align-items: center;
-  gap: 8px;
-  background-color: transparent;
-  color: rgb(53, 68, 72);
-  font-weight: 500;
-  text-decoration: none;
-  padding: 10px 16px;
-  border: 2px solid rgb(64, 77, 93);
-  border-radius: 30px;
-  font-size: 1rem;
-  transition: all 0.2s ease;
-}
-
-.retour:hover {
-  background-color: rgb(73, 84, 95);
-  color: #ffffff; /* couleur du fond */
-}
-
 
 .planches {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 100px;
 }
 
 .planches img {
