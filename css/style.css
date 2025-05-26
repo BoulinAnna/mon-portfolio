@@ -197,6 +197,12 @@ footer {
   gap: 10px;
 }
 
+.footer-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .footer-link {
   display: flex;
   align-items: center;
@@ -287,7 +293,8 @@ footer {
   }
 
   .footer-left,
-  .footer-right {
+  .footer-right
+  .footer-center {
     justify-content: center;
   }
 }
