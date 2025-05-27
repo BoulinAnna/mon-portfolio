@@ -338,3 +338,23 @@ footer {
     justify-content: center;
   }
 }
+
+/* === Dézoom visuel pour les pages projets en DPI élevé === */
+body.dpi-2x main.projet-page {
+  transform: scale(0.85);
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+}
+
+body.dpi-2x .description {
+  font-size: 1rem;
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+body.dpi-2x .planches img {
+  max-width: 95%;
+  height: auto;
+}
