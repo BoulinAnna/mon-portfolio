@@ -56,6 +56,8 @@ header p {
   box-shadow: 13px 8px 20px 0px rgba(0, 0, 0, 0.813);
   overflow: hidden;
   transition: transform 0.2s ease;
+   max-width: 320px;
+  margin: 0 auto;
 }
 
 .project:hover {
@@ -81,11 +83,12 @@ header p {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 121px;
-  padding: 220px 119px;
+  grid-template-columns: repeat(3, 1fr);
+   gap: 60px; /* + d’espace entre les cartes */
+   padding: 160px 60px 30px;
   margin-bottom: 30px;
 }
+
 
 /* === NAVBAR === */
 .nav {
@@ -294,6 +297,43 @@ footer {
 
   .footer-left,
   .footer-right
+  .footer-center {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 140px 40px 30px;
+  }
+
+  .project {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 120px 20px 30px;
+  }
+
+  .project {
+    max-width: 100%;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .footer-left,
+  .footer-right,
   .footer-center {
     justify-content: center;
   }
