@@ -1,50 +1,24 @@
- @import url("../css/style.css");
-
-/* BACKGROUND GLOBAL */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #121212;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.25;
-  filter: blur(17px);
-  z-index: -1;
-  pointer-events: none;
-}
+/* === CONTENU SPÉCIFIQUE À LA PAGE VIDEO FRIDA === */
 
 h1 {
   width: 100%;
-  margin-top: 200px; /* ← espace au-dessus du titre */
-  margin-bottom: 10px; /* ← petit espace avec la description */
+  margin-top: 200px;
+  margin-bottom: 10px;
   padding: 0;
   text-align: center;
   color: #ccc;
 }
 
 .description {
-  margin: 73px auto 104px; /* auto = centré horizontalement */
+  margin: 73px auto 104px;
   width: 100%;
-  max-width: 800px; /* ajuste selon ton goût */
+  max-width: 800px;
   font-size: 1.1rem;
   color: #ccc;
   line-height: 1.6;
   text-align: center;
   padding: 0 20px;
 }
-
-
 
 .video-section {
   max-width: 900px;
@@ -58,14 +32,13 @@ h1 {
 
 .video-thumbnail img {
   width: 100%;
-  max-width: 500px; /* Limite la largeur max de l'image */
+  max-width: 500px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
   margin: 0 auto;
   display: block;
 }
-
 
 .play-button {
   position: absolute;

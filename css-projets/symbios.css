@@ -1,43 +1,18 @@
-@import url("../css/style.css");
-
-/* BACKGROUND GLOBAL */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #121212;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.25;
-  filter: blur(17px);
-  z-index: -1;
-  pointer-events: none;
-}
+/* === CONTENU SPÉCIFIQUE À LA PAGE SYMBIOS === */
 
 .projet-page {
   max-width: 1300px;
-  letter-spacing: 1.3px;
   width: 100%;
   margin: 0 auto;
   padding: 116px 20px;
   color: #fff;
-  font-family: 'Helvetica Neue', sans-serif;
+  letter-spacing: 1.3px;
 }
 
 h1 {
   width: 100%;
-  margin-top: 80px; /* ← espace au-dessus du titre */
-  margin-bottom: 10px; /* ← petit espace avec la description */
+  margin-top: 80px;
+  margin-bottom: 10px;
   padding: 0;
   text-align: center;
 }
@@ -52,8 +27,6 @@ h1 {
   margin-bottom: 104px;
   padding: 0;
 }
-
-
 
 .planches {
   display: flex;
