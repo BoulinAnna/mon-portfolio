@@ -1,16 +1,4 @@
 /* === RESET & BASE === */
-html {
-  font-size: 100%;
-  zoom: 1;
-  -webkit-text-size-adjust: 100%; /* empêche Safari de grossir le texte */
-}
-
-body {
-  transform: scale(1);
-  transform-origin: top center;
-}
-
-
 html, body {
   height: 100%;
   margin: 0;
