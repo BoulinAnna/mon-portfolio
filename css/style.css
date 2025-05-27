@@ -36,19 +36,6 @@ body.dpi-2x .project h3 {
   font-size: 0.8rem;
 }
 
-x/* === Correctif DPI pour pages projet === */
-body.dpi-2x .projet-page {
-  transform: scale(0.93);
-  transform-origin: top center;
-}
-
-body.dpi-2x .description {
-  font-size: 1rem;
-  max-width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 
 /* === BACKGROUND GLOBAL === */
