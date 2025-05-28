@@ -331,7 +331,6 @@ footer {
   }
 }
 
-
-body.dpi-2x main.projet-page {
+body.dpi-2x .site-content {
   zoom: 85%;
 }
