@@ -51,6 +51,8 @@ body::before {
 
 main {
   flex: 1;
+    min-height: 80vh;
+
 }
 
 .content {
@@ -83,6 +85,8 @@ header p {
   justify-content: center;
   max-width: 70em;
   margin: 0 auto;
+    padding-bottom: 6em;
+
 }
 
 .project {
@@ -355,7 +359,7 @@ body.dpi-2x .project {
 }
 
 body.dpi-2x .gallery {
-  gap: 70px 90px;
+  margin-bottom: 5em;
 }
 
 body.dpi-2x .project h3 {
