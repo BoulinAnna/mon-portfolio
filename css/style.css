@@ -22,27 +22,7 @@ body {
   color: #e3e1e1;
 }
 
-/* Corrige l'échelle uniquement si .dpi-2x est présente */
-body.dpi-2x .project {
-  transform: scale(0.85);
-  transform-origin: center;
-}
 
-body.dpi-2x .gallery {
-  gap: 70px 90px;
-}
-
-body.dpi-2x .project h3 {
-  font-size: 0.8rem;
-}
-
-body.dpi-2x main.projet-page {
-  transform: scale(0.85);
-  transform-origin: top center;
-  transition: transform 0.2s ease;
-  height: auto;
-  margin-bottom: -8vh; /* <== ça compense le zoom visuel */
-}
 
 
 /* === BACKGROUND GLOBAL === */
@@ -365,4 +345,19 @@ body.dpi-2x .description {
 body.dpi-2x .planches img {
   max-width: 95%;
   height: auto;
+}
+
+
+/* Corrige l'échelle uniquement si .dpi-2x est présente */
+body.dpi-2x .project {
+  transform: scale(0.85);
+  transform-origin: center;
+}
+
+body.dpi-2x .gallery {
+  gap: 70px 90px;
+}
+
+body.dpi-2x .project h3 {
+  font-size: 0.8rem;
 }
