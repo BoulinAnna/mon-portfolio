@@ -26,8 +26,7 @@ body {
 
 
 /* === BACKGROUND GLOBAL === */
-body::before {
-  content: "";
+.fixed-bg {
   position: fixed;
   top: 0;
   left: 0;
@@ -42,6 +41,7 @@ body::before {
   z-index: -1;
   pointer-events: none;
 }
+
 
 /* === WRAPPER === */
 .wrapper {
@@ -331,6 +331,6 @@ footer {
   }
 }
 
-body.dpi-2x .site-content {
+body.dpi-2x {
   zoom: 85%;
 }
