@@ -56,9 +56,3 @@ h1 {
   border-radius: 6px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.334);
 }
-
-main.projet-page::after {
-  content: "";
-  display: block;
-  height: 100px; /* adapte si tu veux plus ou moins d’espace */
-}

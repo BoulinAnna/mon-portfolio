@@ -8,7 +8,6 @@ html, body {
   box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  font-size: 16px; /* base fixe pour rendre les em cohérents */
 }
 
 * {
@@ -21,9 +20,6 @@ body {
   background-color: #121212;
   color: #e3e1e1;
 }
-
-
-
 
 /* === BACKGROUND GLOBAL === */
 body::before {
@@ -51,12 +47,10 @@ body::before {
 
 main {
   flex: 1;
-    min-height: 80vh;
-
 }
 
 .content {
-  padding: 30px;
+  padding: 0px;
 }
 
 /* === HEADER === */
@@ -77,57 +71,46 @@ header p {
 }
 
 /* === GALLERY PROJETS === */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-  gap: 4em 5em;
-  padding: 10em 3em 3em;
-  justify-content: center;
-  max-width: 70em;
-  margin: 0 auto;
-    padding-bottom: 6em;
-
-}
-
 .project {
-  width: 100%;
-  max-width: 20em; /* ← remplace 320px par une unité fluide */
-  font-size: 1rem; /* ← base de calcul du em */
-  background: white;
-  border-radius: 8px;
-  box-shadow: 13px 8px 20px rgba(0, 0, 0, 0.813);
-  overflow: hidden;
-  transition: transform 0.2s ease;
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 13px 8px 20px 0px rgba(0, 0, 0, 0.813);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .project:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
 }
 
 .project img {
-  width: 100%;
   display: block;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: none;
 }
 
 .project h3 {
   text-align: center;
-  font-size: 0.9rem;
-  padding: 16px 0;
-  margin: 0;
+  font-size: 1rem;
+  padding: 8px 0;
+  margin: 8px;
   background-color: #fff;
-  color: #222;
-  font-weight: 600;
-  text-transform: uppercase;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
 }
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  padding: 160px 60px 30px;
+  margin-bottom: 30px;
+}
 
 /* === NAVBAR === */
 .nav {
@@ -225,14 +208,13 @@ footer {
   font-weight: 400;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-
 }
 
 .footer-left,
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+
 }
 
 .footer-center {
@@ -319,7 +301,6 @@ footer {
 
   footer {
     flex-direction: column;
-    gap: 8px;
     text-align: center;
     padding: 15px;
   }
@@ -331,37 +312,6 @@ footer {
   }
 }
 
-/* === Dézoom visuel pour les pages projets en DPI élevé === */
 body.dpi-2x main.projet-page {
-  transform: scale(0.85);
-  transform-origin: top center;
-  transition: transform 0.2s ease;
-}
-
-body.dpi-2x .description {
-  font-size: 1rem;
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-body.dpi-2x .planches img {
-  max-width: 95%;
-  height: auto;
-}
-
-
-/* Corrige l'échelle uniquement si .dpi-2x est présente */
-body.dpi-2x .project {
-  transform: scale(0.85);
-  transform-origin: center;
-}
-
-body.dpi-2x .gallery {
-  margin-bottom: 5em;
-}
-
-body.dpi-2x .project h3 {
-  font-size: 0.8rem;
+  zoom: 85%;
 }
