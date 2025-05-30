@@ -124,3 +124,21 @@ h1, h2, h3, .section-title {
 .skill:hover {
   transform: translateY(-4px);
 }
+
+@media screen and (max-width: 768px) {
+  .skill-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0;
+  }
+
+  .skill {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
