@@ -142,3 +142,12 @@ h1, h2, h3, .section-title {
     grid-template-columns: 1fr;
   }
 }
+
+
+@media screen and (max-width: 768px) {
+  .hero .portrait {
+    max-width: 150%;
+    transform: scale(1.2) translateX(-10%);
+    margin-top: 10px;
+  }
+}
