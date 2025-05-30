@@ -20,6 +20,7 @@ html, body {
 body {
   background-color: #121212;
   color: #e3e1e1;
+  overflow-x: hidden;
 }
 
 
@@ -30,8 +31,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
   background-size: cover;
   background-position: center;
@@ -40,8 +41,6 @@ body {
   filter: blur(17px);
   z-index: -1;
   pointer-events: none;
-  transform: scale(1.18); /* 1 / 0.85 ≈ 1.176 */
-  transform-origin: top left;
 }
 
 
@@ -49,6 +48,8 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 main {
@@ -335,4 +336,10 @@ footer {
 
 body.dpi-2x {
   zoom: 85%;
+}
+
+@media (max-width: 768px) {
+  .fixed-bg {
+    height: 100%;
+  }
 }
