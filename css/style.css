@@ -40,6 +40,8 @@ body {
   filter: blur(17px);
   z-index: -1;
   pointer-events: none;
+  transform: scale(1.18); /* 1 / 0.85 ≈ 1.176 */
+  transform-origin: top left;
 }
 
 
