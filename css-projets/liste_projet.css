@@ -1,4 +1,3 @@
-@import url("../css/style.css");
 
 /* BACKGROUND GLOBAL */
 body {
@@ -7,22 +6,6 @@ body {
   background-color: #121212;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.25;
-  filter: blur(17px);
-  z-index: -1;
-  pointer-events: none;
-}
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 768px) {
