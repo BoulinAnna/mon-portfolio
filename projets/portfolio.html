@@ -10,7 +10,13 @@
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     </head>
 
-
+      <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        if (window.devicePixelRatio >= 2) {
+          document.body.classList.add("dpi-2x");
+        }
+      });
+      </script>
 
     <body>
       <div class="zoom-wrapper">
