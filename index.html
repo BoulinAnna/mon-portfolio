@@ -12,16 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
 
-  <script>
+    <script>
     window.addEventListener("DOMContentLoaded", () => {
-      if (window.devicePixelRatio >= 2) {
+      const isRetina = window.devicePixelRatio >= 2;
+      const isDesktop = window.innerWidth >= 768;
+
+      if (isRetina && isDesktop) {
         document.body.classList.add("dpi-2x");
       }
     });
-    </script>
+  </script>
+
 
     <body>
-      
+
     <div class="zoom-wrapper"></div>
      <div class="fixed-bg"></div>
       <div class="site-content">
