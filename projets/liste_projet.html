@@ -10,13 +10,17 @@
 
   </head>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      if (window.devicePixelRatio >= 2) {
-        document.body.classList.add("dpi-2x");
-      }
-    });
+      <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        const isRetina = window.devicePixelRatio >= 2;
+        const isDesktop = window.innerWidth >= 768;
+
+        if (isRetina && isDesktop) {
+          document.body.classList.add("dpi-2x");
+        }
+      });
     </script>
+
 
     <body>
       <div class="zoom-wrapper">
