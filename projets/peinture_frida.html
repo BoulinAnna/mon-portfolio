@@ -19,48 +19,49 @@
       </script>
 
 
-      <body>
-      <div id="navbar"></div>
-      <script>
-        function playVideo() {
-          const thumbnail = document.querySelector(".video-thumbnail");
-          const video = document.getElementById("peintureVideo");
+   <body>
+        <div class="zoom-wrapper"></div>
+          <div id="navbar"></div>
+                <script>
+                  function playVideo() {
+                    const thumbnail = document.querySelector(".video-thumbnail");
+                    const video = document.getElementById("peintureVideo");
 
-          thumbnail.style.display = "none";
-          video.style.display = "block";
-          video.play();
-        }
-      </script>
+                    thumbnail.style.display = "none";
+                    video.style.display = "block";
+                    video.play();
+                  }
+                </script>
 
-      <div class="fixed-bg"></div>
-      <main class="projet-page">
-
-
-        <h1>Peinture à l'huile</h1>
-        <p class="description">
-          Passionnée par le dessin et la peinture depuis plus de 10 ans, j’ai exploré différentes techniques artistiques : croquis, fusain, aquarelle, acrylique…
-          La peinture à l’huile est celle que j’affectionne le plus pour sa richesse de texture, sa profondeur et la précision qu’elle permet.
-        </p>
-        <section class="video-section">
-
-          <div class="video-wrapper">
-            <div class="video-thumbnail" onclick="playVideo()">
-              <img src="../images/video_frida/frida.jpg" alt="Vidéo peinture">
-              <div class="play-button">&#9658;</div> <!-- bouton play -->
-            </div>
-
-            <video id="peintureVideo" controls width="100%" preload="auto" style="display: none;">
-              <source src="../images/video_frida/frida.mp4" type="video/mp4">
-              Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-
-          </div>
-        </section>
+          <div class="fixed-bg"></div>
+            <main class="projet-page">
 
 
-      </main>
-      <div id="footer"></div>
-      <script src="../js/layout.js"></script>
-      <script src="../js/font.js"></script>
+                  <h1>Peinture à l'huile</h1>
+                  <p class="description">
+                    Passionnée par le dessin et la peinture depuis plus de 10 ans, j’ai exploré différentes techniques artistiques : croquis, fusain, aquarelle, acrylique…
+                    La peinture à l’huile est celle que j’affectionne le plus pour sa richesse de texture, sa profondeur et la précision qu’elle permet.
+                  </p>
+                  <section class="video-section">
+
+                    <div class="video-wrapper">
+                      <div class="video-thumbnail" onclick="playVideo()">
+                        <img src="../images/video_frida/frida.jpg" alt="Vidéo peinture">
+                        <div class="play-button">&#9658;</div> <!-- bouton play -->
+                      </div>
+
+                      <video id="peintureVideo" controls width="100%" preload="auto" style="display: none;">
+                        <source src="../images/video_frida/frida.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                      </video>
+
+                    </div>
+                  </section>
+
+
+           </main>
+            <div id="footer"></div>
+              <script src="../js/layout.js"></script>
+                <script src="../js/font.js"></script>
   </body>
 </html>

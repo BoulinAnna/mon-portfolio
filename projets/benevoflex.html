@@ -19,49 +19,50 @@
       </script>
 
   <body>
-    <div class="fixed-bg"></div>
-    <div id="navbar"></div>
-        <script>
-          function playVideo() {
-            const thumbnail = document.querySelector(".video-thumbnail");
-            const video = document.getElementById("applicationWebVideo");
+    <div class="zoom-wrapper"></div>
+      <div class="fixed-bg"></div>
+        <div id="navbar"></div>
+            <script>
+              function playVideo() {
+                const thumbnail = document.querySelector(".video-thumbnail");
+                const video = document.getElementById("applicationWebVideo");
 
-            thumbnail.style.display = "none";
-            video.style.display = "block";
-            video.play();
-          }
-        </script>
+                thumbnail.style.display = "none";
+                video.style.display = "block";
+                video.play();
+              }
+            </script>
 
-        <main class="projet-page">
-
-
-          <h1>BenevoFlex – Plateforme de mise en relation entre bénévoles et associations</h1>
-          <p class="description">
-            BenevoFlex est une application web développée dans le cadre de mon projet de fin de formation chez Le Wagon. L’objectif : simplifier l’engagement bénévole en facilitant la mise en relation entre personnes volontaires et associations selon leurs besoins et disponibilités.
-              La plateforme permet :
-              Aux bénévoles de renseigner leurs compétences, envies et créneaux disponibles.
-              Aux associations de publier des missions précises et ciblées.
-              Grâce à un système de matching simple et intuitif, BenevoFlex favorise une rencontre efficace entre offre et demande de solidarité.
-          </p>
-          <section class="video-section">
+            <main class="projet-page">
 
 
-            <div class="video-wrapper">
-              <div class="video-thumbnail" onclick="playVideo()">
-                <img src="../images/benevolfex/Benevoflex_vignette.jpg" alt="Vidéo Benevoflex">
-                <div class="play-button"></div> <!-- bouton play -->
-              </div>
-
-              <video id="applicationWebVideo" controls style="display: none;" width="100%">
-                <source src="../images/benevolfex/demo2.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture vidéo.
-              </video>
-
-            </div>
-          </section>
+              <h1>BenevoFlex – Plateforme de mise en relation entre bénévoles et associations</h1>
+              <p class="description">
+                BenevoFlex est une application web développée dans le cadre de mon projet de fin de formation chez Le Wagon. L’objectif : simplifier l’engagement bénévole en facilitant la mise en relation entre personnes volontaires et associations selon leurs besoins et disponibilités.
+                  La plateforme permet :
+                  Aux bénévoles de renseigner leurs compétences, envies et créneaux disponibles.
+                  Aux associations de publier des missions précises et ciblées.
+                  Grâce à un système de matching simple et intuitif, BenevoFlex favorise une rencontre efficace entre offre et demande de solidarité.
+              </p>
+              <section class="video-section">
 
 
-        </main>
+                <div class="video-wrapper">
+                  <div class="video-thumbnail" onclick="playVideo()">
+                    <img src="../images/benevolfex/Benevoflex_vignette.jpg" alt="Vidéo Benevoflex">
+                    <div class="play-button"></div> <!-- bouton play -->
+                  </div>
+
+                  <video id="applicationWebVideo" controls style="display: none;" width="100%">
+                    <source src="../images/benevolfex/demo2.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture vidéo.
+                  </video>
+
+                </div>
+              </section>
+
+
+            </main>
         <div id="footer"></div>
         <script src="../js/layout.js"></script>
         <script src="../js/font.js"></script>
